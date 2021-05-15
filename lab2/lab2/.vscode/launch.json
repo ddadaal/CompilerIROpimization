@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++ - Build and debug lab2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${cwd}/lab2",
+            "args": [
+                "-opt=scp",
+                // "-opt=dse",
+                // "-backend=3addr",
+                "-backend=c",
+                "<",
+                "../examples/hanoifibfac.3addr",
+                // "./example-dse.3addr"
+                // "./example-scp.3addr"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++ build lab2",
+            "miDebuggerPath": "/usr/sbin/gdb"
+        }
+    ]
+}

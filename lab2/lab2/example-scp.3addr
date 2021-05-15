@@ -1,0 +1,33 @@
+    instr 1: nop
+    instr 2: enter 0
+    instr 3: ret 0
+    instr 4: enter 32
+    instr 5: move 0 s#-8
+    instr 6: add a_base#32760 GP
+    instr 7: store 4 (6)
+    instr 8: move 5 c#-32
+    instr 9: move 0 i#-16
+    instr 10: cmpeq c#-32 0
+    instr 11: blbc (10) [15]
+    instr 12: add a_base#32760 GP
+    instr 13: load (12)
+    instr 14: move (13) c#-32
+    instr 15: call [2]
+    instr 16: cmpeq k#24 0
+    instr 17: blbc (16) [20]
+    instr 18: move 1 b#-24
+    instr 19: br [21]
+    instr 20: move 2 b#-24
+    instr 21: cmplt i#-16 n#16
+    instr 22: blbc (21) [32]
+    instr 23: add a_base#32760 GP
+    instr 24: load (23)
+    instr 25: mul (24) b#-24
+    instr 26: add s#-8 (25)
+    instr 27: add (26) c#-32
+    instr 28: move (27) s#-8
+    instr 29: add i#-16 1
+    instr 30: move (29) i#-16
+    instr 31: br [21]
+    instr 32: ret 16
+    instr 33: nop

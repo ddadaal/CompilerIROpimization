@@ -1,0 +1,18 @@
+    instr 1: nop
+    instr 2: enter 0
+    instr 3: ret 8
+    instr 4: enter 24
+    instr 5: add a_base#32760 GP
+    instr 6: store 3 (5)
+    instr 7: move 2 b#-8
+    instr 8: move 3 c#-16
+    instr 9: move 4 c#-16
+    instr 10: move 1 d#-24
+    instr 11: cmpeq d#-24 1
+    instr 12: blbc (11) [17]
+    instr 13: add c#-16 1
+    instr 14: move (13) c#-16
+    instr 15: param c#-16
+    instr 16: call [2]
+    instr 17: ret 0
+    instr 18: nop
